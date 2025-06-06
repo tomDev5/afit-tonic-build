@@ -43,3 +43,9 @@ allowed_external_types = [
   "prost_build::*",
   "prost_types::*",
 ]
+
+[workspace]
+lints.rust = { missing_debug_implementations = "warn", missing_docs = "warn", rust_2018_idioms = "warn", unreachable_pub = "warn" }
+lints.clippy = { uninlined_format_args = "deny" }
+lints.rustdoc = { broken_intra_doc_links = "deny" }
+package = { rust-version = "1.75" }
